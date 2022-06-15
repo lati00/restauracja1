@@ -1,0 +1,16 @@
+header.content-bar
+  div.bar-text
+    div.text-primary Zamów to na co masz ochotę.
+    div.text-secondary Wyszukaj ulubioną restaurację, kuchnię lub danie.
+  div.offer.offer--dim.mx-4
+    div.offer-texts
+      - var url1 = "restaurants/" + highlighted.name
+      p.offer-text-primary= highlighted.name
+    a(href= url1)
+      img(src= "https://picsum.photos/300/200?random=100")
+  div.offer.mx-4
+    div.offer-texts
+      - var url2 = "restaurants/" + highlighted2.name
+      p.offer-text-primary= highlighted2.name
+    a(href= url2)
+      img(src= "https://picsum.photos/300/200?random=110")

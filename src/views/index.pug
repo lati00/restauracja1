@@ -1,0 +1,25 @@
+doctype html
+html
+   head
+      title= title
+      link(rel="shortcut icon" href="#")
+      script(src='https://app.enzuzo.com/apps/enzuzo/static/js/__enzuzo-cookiebar.js?uuid=aa375558-eb78-11ec-8092-3706bd38dfa9')
+      style
+         include style.css
+   body
+      include header
+      main.main
+         include bar
+         include sortingAside
+         section.restaurants
+            div.restaurants-grid
+               each val in values.length ? values : ['There are no values']
+                  article.restaurant
+                     - var url = "https://picsum.photos/300/200?random=" + val.id
+                     - var restaurantUrl = "restaurants/" + val.name
+                     div.restaurant-thumb
+                        a(href= restaurantUrl)
+                           img(src= url)
+                     h3
+                        a(href= restaurantUrl)= val.name
+                     span= val.priceRange

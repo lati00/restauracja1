@@ -1,0 +1,31 @@
+doctype html
+html
+   head
+      title= title
+      style
+         include style.css
+   body
+      include header
+      include bar
+      form(action="/restaurants", method="post")
+         div.form
+            h2 Dodaj restaurację
+
+            div.form-item
+               label(for = "name") Name
+               input(class="form-input" type= "text", id="name", name="name", required)
+
+            div.form-item
+               label(for = "desc") Description
+               input(class="form-input" type= "text", id="desc", name="desc", required)
+
+            div.form-item
+               label(for = "menu") Menu
+               input(class="form-input" type= "text", id="menu", name="menu", required)
+
+            div.form-item
+               label(for = "priceRange") Price range
+               input(class="form-input" type= "text", id="priceRange", name="priceRange", required)
+
+            div.form-item
+               input(class="btn option-button" type="submit", value="Submit")

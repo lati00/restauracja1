@@ -1,0 +1,14 @@
+aside.filters
+  h2.filters-heading Dostosuj do siebie
+  section.filters-filters
+    h3 Sortuj według
+    form(class="filters-option filters-option-sort" id="form" action="/restaurants" method="get")
+      div.option-group
+        label(for="radio-1", class="option-label")
+          input(type="radio", id="radio-1", name="sorting", class="option-radio", checked= opt1, value="default", onChange="this.form.submit();")
+          span Wybrane dla ciebie (wartość domyślna)
+          br
+      div.option-group
+        label(for="radio-2", class="option-label")
+          input(type="radio", id="radio-2", name="sorting", class="option-radio", checked= opt2, value="priceRange", onChange="this.form.submit();")
+          span Przedział cenowy

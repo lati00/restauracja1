@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    style
+      include style.css
+  body
+    include header
+    article
+      - var url = "https://picsum.photos/300/200?random=" + id
+      div.restaurant-bar
+        div.restaurant-bar-col.col-fst
+          h2= name
+          img(src= url)
+        div.restaurant-bar-col.col-snd
+          p.text-primary= desc
+          p.text-secondary= priceRange
+      div.menu
+        h2 Menu
+        each val in menu.length ? menu : ['There are no values']
+          div.menu-item
+            span= val
