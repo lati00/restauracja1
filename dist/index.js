@@ -53,5 +53,8 @@ app.post("/restaurants", (req, res) => {
     restaurantController.addRestaurant(body);
     res.redirect('/');
 });
+app.get("/*", (req, res) =>{
+    res.sendFile(path.resolve(__dirname, "src", "index.pug"));
+});
 var port = process.env.PORT || 3000;
 app.listen(port, () => console.log("Listening on port 3000"));
